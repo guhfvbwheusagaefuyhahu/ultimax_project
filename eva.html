@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Project | Ultimax Group</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #004aad;
+            --accent: #f39c12;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+
+        /* --- Dynamic Hero Header --- */
+        .project-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(15,23,42,0.7), rgba(15,23,42,0.7)), 
+                        url('eva.png'); /* Ganti dengan Foto Project */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .project-hero h1 { 
+            font-family: 'Poppins'; 
+            font-size: 3.5rem; 
+            margin-bottom: 10px; 
+            text-transform: uppercase;
+        }
+
+        .breadcrumb { font-weight: 600; color: var(--accent); letter-spacing: 2px; margin-bottom: 15px; }
+
+        /* --- Content Layout --- */
+        .container { max-width: 1000px; margin: -80px auto 100px; padding: 0 20px; position: relative; z-index: 10; }
+
+        .white-card {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+        .back-btn:hover { transform: translateX(-5px); }
+
+        .project-desc h2 { font-size: 2rem; margin-bottom: 20px; color: var(--primary); }
+        .project-desc p { font-size: 1.1rem; color: #475569; margin-bottom: 30px; }
+
+        /* --- Specs Grid --- */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .spec-item {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary);
+            transition: 0.3s;
+        }
+        .spec-item:hover { background: var(--primary); color: white; transform: scale(1.05); }
+        .spec-item strong { display: block; font-size: 0.8rem; text-transform: uppercase; opacity: 0.7; }
+        .spec-item span { font-size: 1.1rem; font-weight: 700; }
+
+        /* --- Mini Gallery --- */
+        .gallery-title { margin: 60px 0 30px; text-align: center; font-size: 1.8rem; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .gallery-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        .gallery-img:hover { filter: brightness(1.1); transform: scale(1.02); }
+
+        footer { text-align: center; padding-bottom: 50px; color: #94a3b8; font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            .project-hero h1 { font-size: 2.2rem; }
+            .white-card { padding: 30px; }
+            .gallery-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="project-hero">
+        <div class="breadcrumb" data-aos="fade-down">PROJECT DETAIL</div>
+        <h1 data-aos="zoom-in" data-aos-duration="1000">Electric Voice Assistence (EVA) </h1>
+    </header>
+
+    <div class="container">
+        <div class="white-card" data-aos="fade-up">
+            <a href="index.html" class="back-btn">← KEMBALI KE BERANDA</a>
+            
+            <div class="project-desc">
+                <h2>About </h2>
+                <p>
+                    Electric Voice Assitence ( EVA ) adalah perangkat untuk mengontrol berbagai macam alat elektronik untuk menyala dan mematikan suatu alat elektronik dengan hanya hp saja dengan memanfaatkan iot.eva bekerja dengan prinsip yang mirip seperti saklar.bedanya ia bisa dikontrol melalui aplikasi “EVA G6” untuk mengontrol peralatan Listrik yang ada dirumah.eva sendiri bisa mengontrol sampai 4 buah perangkat elektronik sekaligus.sistem ini sudah pernah diterapkan di sebuah Gedung untuk mengendalikan system kelistrikan mulai dari lampu dan stopkontak pada 4 ruangan berbeda hanya dengan 1 device handphone saja.fitu unggulan dari eva adalah ia bisa voice recognition artinya ia dapat diperintah melalui suara,persis seperti alexa dan google home.dan yang paling special,eva bisa dikontrol dari mana saja.walaupun dengan jarak control lebih dari 1000 km.eva masih bisa dikontrol.ini karena kami menggunakan teknologi iot cloud server dengan perantara blynk iot.namun dengan syarat eva harus mendapatkan koneksi internet dan juga device pengontrol harus terhubung ke internet juga.
+                </p>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-item" data-aos="fade-up" data-aos-delay="100">
+                    <strong>Main Controller</strong>
+                    <span>EVA G6</span>
+                </div>
+                <div class="spec-item" data-aos="fade-up" data-aos-delay="200">
+                    <strong>Input Voltage</strong>
+                    <span>5v DC Standard</span>
+                </div>
+                <div class="spec-item" data-aos="fade-up" data-aos-delay="300">
+                    <strong>Safety System</strong>
+                    <span>safety relay for prefenting trip and short</span>
+                </div>
+                <div class="spec-item" data-aos="fade-up" data-aos-delay="400">
+                    <strong>Cost Efficient</strong>
+                    <span>Low-Cost Components</span>
+                </div>
+            </div>
+
+            <h2 class="gallery-title">Dokumentasi Unit</h2>
+            <div class="gallery-grid">
+                <img src="eva1.jpeg" class="gallery-img" data-aos="zoom-in">
+                <img src="eva2.jpeg" class="gallery-img" data-aos="zoom-in" data-aos-delay="200">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Ultimax Group - SMK Innovation Project</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List | Ultimax Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #004aad;
+            --dark: #0f172a;
+            --light: #f8fafc;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background: var(--light); padding: 50px 5%; }
+
+        .header-list { margin-bottom: 50px; display: flex; justify-content: space-between; align-items: center; }
+        .back-home { text-decoration: none; color: var(--primary); font-weight: 700; }
+
+        /* KARTU PERSEGI PANJANG (FULL WIDTH) */
+        .list-container { display: flex; flex-direction: column; gap: 30px; }
+        
+        .wide-card {
+            width: 100%;
+            height: 300px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            position: relative;
+        }
+
+        .wide-card:hover { transform: scale(1.01); box-shadow: 0 15px 40px rgba(0,74,173,0.15); }
+
+        /* Sisi Kiri: Teks */
+        .card-content {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 2;
+        }
+        .card-content h2 { font-size: 2rem; color: var(--dark); margin-bottom: 10px; }
+        .card-content p { color: #64748b; font-size: 1.1rem; max-width: 80%; margin-bottom: 25px; }
+
+        /* Sisi Kanan: Gambar dengan Gradasi */
+        .card-image {
+            flex: 1.2;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Efek Gradasi Menutup Gambar agar Teks Terbaca */
+        .card-image::before {
+            content: "";
+            position: absolute;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, white 0%, transparent 100%);
+        }
+
+        .btn-see-more {
+            padding: 12px 25px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            width: fit-content;
+        }
+
+        @media (max-width: 768px) {
+            .wide-card { flex-direction: column; height: auto; }
+            .card-image { height: 200px; }
+            .card-image::before { background: linear-gradient(to bottom, white 0%, transparent 100%); }
+            .card-content p { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-list">
+        <div>
+            <h1 style="font-size: 2.5rem;">All Projects</h1>
+            <p>Daftar lengkap seluruh karya Ultimax Group.</p>
+        </div>
+        <a href="index.html" class="back-home">← Kembali ke Beranda</a>
+    </div>
+
+    <div class="list-container">
+        
+        <div class="wide-card" data-aos="fade-up">
+            <div class="card-content">
+                <span style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Category: Automation</span>
+                <h2>PLMC CN3X</h2>
+                <p>low cost programable controller ditenagai dengan chip atmega 328 p.</p>
+                <a href="project1.html" class="btn-see-more">Lihat Detail Project</a>
+            </div>
+            <div class="card-image" style="background-image: url('cn3x_thb.jpg');"></div>
+        </div>
+
+        <div class="wide-card" data-aos="fade-up">
+            <div class="card-content">
+                <span style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Category: IoT</span>
+                <h2>ULTIMAX MOTOR</h2>
+                <p>komponen simuasi motor 3 phase yang sapat diintegrasikan dengan plmc cn3x.</p>
+                <a href="motor.html" class="btn-see-more">Lihat Detail Project</a>
+            </div>
+            <div class="card-image" style="background-image: url('motor_thb.jpg');"></div>
+        </div>
+
+        <div class="wide-card" data-aos="fade-up">
+            <div class="card-content">
+                <span style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Category: IoT</span>
+                <h2>ULTIMAX CREALIX</h2>
+                <p>robot arm manipulator 3 axis yang dapat diprogram dengan software dan bahasa khusus.</p>
+                <a href="crealix.html" class="btn-see-more">Lihat Detail Project</a>
+            </div>
+            <div class="card-image" style="background-image: url('crealix_thb.jpg');"></div>
+        </div>
+
+        <div class="wide-card" data-aos="fade-up">
+            <div class="card-content">
+                <span style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Category: IoT</span>
+                <h2>ELECTRIC VOICE ASSISTENCE ( EVA )</h2>
+                <p>voice assistence yang membantu anda mengontrol perangkat elektroik yang ada dirumah anda</p>
+                <a href="eva.html" class="btn-see-more">Lihat Detail Project</a>
+            </div>
+            <div class="card-image" style="background-image: url('eva.png');"></div>
+        </div>
+
+        <div class="wide-card" data-aos="fade-up">
+            <div class="card-content">
+                <span style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Category: IoT</span>
+                <h2>ULTIMAX OCNOLOM T1</h2>
+                <p>robot observasi cerdas yang membantu anda melihat celah yang tidak dapat anda masuki</p>
+                <a href="ocnolom.html" class="btn-see-more">Lihat Detail Project</a>
+            </div>
+            <div class="card-image" style="background-image: url('ocnolom.png');"></div>
+        </div>
+
+        <div class="wide-card" data-aos="fade-up">
+            <div class="card-content">
+                <span style="color: var(--primary); font-weight: 700; font-size: 0.8rem; text-transform: uppercase;">Category: IoT</span>
+                <h2>CODENAME : MAVIS G33</h2>
+                <p>rc boat untuk tujuan penelitian pengujian kualitas air di berbagai tempat perairan dan memberi solusi pengembalian kualitas air kembali.</p>
+                <a href="mavis.html" class="btn-see-more">Lihat Detail Project</a>
+            </div>
+            <div class="card-image" style="background-image: url('mavis.png');"></div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800 });</script>
+</body>
+</html>
